@@ -1,0 +1,108 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: ' Frist App ',
+      debugShowCheckedModeBanner: false,
+      home: fristScreen(),
+    );
+  }
+}
+
+class fristScreen extends StatefulWidget {
+  @override
+  _fristScreenState createState() => _fristScreenState();
+}
+
+class _fristScreenState extends State<fristScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.greenAccent,
+        title: Text(
+          'Hassan App',
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 20,
+            fontWeight: FontWeight.w800,
+          ),
+        ),
+        centerTitle: true,
+        leading: IconButton(
+          onPressed: () {
+            print("back");
+          },
+          icon: Icon(
+            Icons.arrow_back_ios,
+            color: Colors.black,
+            size: 25,
+          ),
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              print("back");
+            },
+            icon: Icon(
+              Icons.search,
+              color: Colors.black,
+              size: 25,
+            ),
+          ),
+          IconButton(
+            onPressed: () {
+              print("back");
+            },
+            icon: Icon(
+              Icons.menu,
+              color: Colors.black,
+              size: 25,
+            ),
+          ),
+        ],
+        elevation: 10,
+      ),
+
+      body:Column(
+
+mainAxisAlignment:MainAxisAlignment.center ,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Image.network(
+            "https://morb3.com/wp-content/uploads/2020/12/7-%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D8%A7%D9%87%D9%84%D9%8A-%D8%B5%D9%88%D8%B1-%D8%A7%D9%84%D8%A7%D9%87%D9%84%D9%8A-2021-HD-%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D8%A7%D9%87%D9%84%D9%8A-%D9%84%D9%84%D9%85%D9%88%D8%A8%D8%A7%D9%8A%D9%84-%D8%B5%D9%88%D8%B1-%D9%84%D9%84%D8%A7%D9%87%D9%84%D9%8A-%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D8%AE%D9%84%D9%81%D9%8A%D8%A9-%D8%B4%D8%B9%D8%A7%D8%B1-%D8%A7%D9%84%D8%A7%D9%87%D9%84%D9%89-al-ahly-%D9%84%D9%84%D9%87%D8%A7%D8%AA%D9%81-%D9%84%D9%84%D8%A7%D9%8A%D9%81%D9%88%D9%86-724x1024.jpg",
+            fit: BoxFit. cover,
+            height: 200,
+            width: 200,
+          ),
+          Padding(
+            padding: EdgeInsets.all(5),
+          child:Text("""AlAhaly
+  1997""",style: TextStyle(
+              color: Colors.red,
+              fontSize: 25,
+              fontWeight: FontWeight.bold
+
+
+          ),),
+
+          ),
+
+
+
+        ],
+
+      )
+
+    );
+  }
+}
